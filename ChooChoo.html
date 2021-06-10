@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+        <head>
+		<meta charset="utf-8">
+                <title>Choo Choo</title>
+                <script src="ChooChoo.js" type="text/javascript" defer></script>
+                <style id="css">
+                        body{
+                                text-align: center;
+                                background-color: black;
+                                color:white;
+                        }
+                        table,th,td{
+                                font-size: 15px;
+                                border: solid 1px;
+                                padding: 10px;
+                                border-collapse: collapse;
+                                
+                        }
+                        table{
+                                color:black;
+                                margin:1em auto;
+                        }
+                        .free{
+                                width: 20px;
+                                border-top-color: black;
+                                border-bottom-color: black;
+                        }
+                        .data{
+                                width: 60px;
+                        }
+                        #time{
+                                font-weight: bold;
+                        }
+                        canvas{
+                                border: solid 1px;
+                        }
+                        h2{
+                                font-family: "courier";
+                        }
+                        span{
+                                font-size: 20px;
+                                font-weight: bold;
+                        }
+                </style>
+	</head>
+	<body onload="loading()" onkeyup="pause(event)">
+                <h2>Choo Choo</h2>
+                <table id="dataTable">
+                        <tr>
+                                <th>Total Value</th>
+                                <th>Goal</th>
+                                <th class="free"></th>
+                                <th>Diamond</th>
+                                <th>Gold</th>
+                                <th>Oil</th>
+                                <th>Wine</th>
+                                <th>Wood</th>
+                                <th class="free"></th>
+                                <th>Time left</th>
+                                <th>Speed</th>
+                        <tr>
+                        <tr>
+                                <td>$ <span id="totalValue"></span> k</td>
+                                <td id="goalValue"></td>
+                                <td class="free"></td>
+                                <td class="data">$ <span class="item" id="diamond"></span> k</td>
+                                <td class="data">$ <span class="item" id="gold"></span> k</td>
+                                <td class="data">$ <span class="item" id="oil"></span> k</td>
+                                <td class="data">$ <span class="item" id="wine"></span> k</td>
+                                <td class="data">$ <span class="item" id="wood"></span> k</td>
+                                <td class="free"></td>
+                                <td><span id="time">2 : 00</span></td>
+                                <td><span id="speed"></span></td>
+                        </tr>
+                </table>
+                <canvas id="canvas" onclick="clickCanvas(event)" width="804px" height="604px"></canvas><br>
+
+                <button onclick="resetButton()">Main Menu</button>
+	</body>
+</html>
